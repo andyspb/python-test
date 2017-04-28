@@ -12,5 +12,20 @@ print "the matrix dimension is " + str(a.shape)
 
 from matplotlib.pyplot import *
 from pylab import *
-matshow(a)
-show()
+
+def main():
+    matshow(a)
+    show()
+
+def shape_array():
+    x = np.array([ [67, 63, 87],
+               [77, 69, 59],
+               [85, 87, 99],
+               [79, 72, 71],
+               [63, 89, 93],
+               [68, 92, 78]])
+    print(np.shape(x))
+
+if __name__ == '__main__':
+    #main()
+    shape_array()

@@ -14,15 +14,15 @@ def quickSortHelper(arr,start,end):
         quickSortHelper(arr,splitpoint+1,end)
 
 def partition(arr,start,end):
-    pivot = arr[start]
+    piv = arr[start]
     left = start+1
     right = end
     done = False
     while not done:
-        while left <= right and arr[left] <= pivot:
+        while left <= right and arr[left] <= piv:
             left = left + 1
 
-        while arr[right] >= pivot and right >= left:
+        while arr[right] >= piv and right >= left:
             right = right -1
 
         if right < left:
