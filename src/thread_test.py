@@ -14,11 +14,12 @@ def list_append(count, id, out_list):
     of times. A CPU-heavy operation!
     """
     for i in range(count):
-        out_list.append(random.random())
+        rand = random.random()
+        logging.info(rand)
+        out_list.append(rand)
 
-if __name__ == "__main__":
-    logging.basicConfig(level=logging.INFO)
-    
+def main():
+   
     size = 10000000   # Number of random numbers to add
     threads = 2   # Number of threads to create
 
@@ -40,3 +41,10 @@ if __name__ == "__main__":
         j.join()
 
     print "List processing complete."
+    print  out_list
+
+    
+
+if __name__ == "__main__":
+    logging.basicConfig(level=logging.INFO)
+    main()
