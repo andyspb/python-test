@@ -5,18 +5,21 @@ Created on May 1, 2017
 '''
 
 import logging
+from logging.config import dictConfig
 
 
-class MyClass(object):
+class Logger(object):
     '''
     classdocs
     '''
-    def __init__(self, params):
+    def __init__(self, name = "None"):
         '''
         Constructor
         '''
-        self.logger = logging.getLogger("MyLogger")
-        self.logger.basicConfig(logging.INFO)
+        self.logger = logging.getLogger(name)
+        logging.basicConfig(level=logging.INFO,
+                            format='%(asctime)s %(name) -4s %(levelname) -4s %(message)s',
+                            datefmt='%d,%b %Y %H:%M:%S')
         
-    def log(self, param):
+    def log(self,param):
         self.logger.info(param)

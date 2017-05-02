@@ -20,7 +20,7 @@ def main():
     logging.info(numbers)
     num = len(numbers)
     pool = ThreadPool(num) 
-    results = pool.map(sort, numbers)
+    pool.map(sort, numbers)
 
     pool.close()
     pool.join()
