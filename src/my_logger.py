@@ -23,3 +23,12 @@ class Logger(object):
         
     def log(self,param):
         self.logger.info(param)
+        
+        
+def test():
+    logger = Logger("TEST")
+    logger.log("Test log")
+        
+if __name__ == '__main__':
+    test()
+    
