@@ -7,6 +7,12 @@ Created on Jul 5, 2017
 
 from time import sleep
 
+def print_decorator(function):
+    def wrapper(*args, **kwargs):
+        print "From print_decorator"
+        return function(*args, **kwargs)
+    return wrapper
+
 def sleep_decorator(function):
 
     """
@@ -20,6 +26,7 @@ def sleep_decorator(function):
         return function(*args, **kwargs)
     return wrapper
 
+@print_decorator
 @sleep_decorator
 def print_number(num):
     return num
