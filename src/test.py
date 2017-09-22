@@ -74,5 +74,10 @@ def main(argv):
         
     return 0
 
-ret = main(sys.argv)
-sys.exit(ret)
+def test():
+    print reduce (lambda x, y: x + y, filter(lambda x: x % 2, map(lambda x: x * x, xrange (10 ** 6))))
+    print sum(x * x for x in xrange(1, 10 ** 6, 2))
+    print reduce(lambda x, y: x + y, filter(lambda x: x % 2, map(lambda x: x * x, xrange (10 ** 6)))) == sum(x * x for x in xrange(1, 10 ** 6, 2))
+
+if __name__ == '__main__':
+    test()
