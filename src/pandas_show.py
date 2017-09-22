@@ -21,18 +21,17 @@ def expand_grid(data_dict):
     return pd.DataFrame.from_records(rows, columns=data_dict.keys())
 
 def test_pandas():
-    df = pd.DataFrame({'AAA' : [4,5,6,7], 'BBB' : [10,20,30,40],'CCC' : [100,50,-30,-50]}); 
-    print df
-    
+    df = pd.DataFrame({'AAA' : [4,5,6,7], 'BBB' : [10,20,30,40],'CCC' : [100,50,-30,-50]});
+    print (df)
     df.ix[df.AAA >= 5,'BBB'] = -1; 
-    print df
+    print (df)
     
     df.ix[df.AAA >= 5,['BBB','CCC']] = 555; 
-    print df
+    print (df)
 
 def main():
     numbers = [8, 42, 38, 111, 2, 39, 1];
-    print numbers, "\n";
+    print (numbers, "\n");
 
 
 if __name__ == '__main__':
