@@ -18,11 +18,11 @@ def worker(n):
 def main():
     logging.info("From main")
     numbers = [8, 42, 38, 111, 2, 39, 1];
-    print numbers, "\n";
+    print (numbers)
     for n in numbers:
         p = Process(target = worker, args = (n, ))
         p.start()
-    print sorted_numbers, "\n";
+    print (sorted_numbers)
 
 if __name__ == '__main__':
     logging.basicConfig(level=logging.INFO)

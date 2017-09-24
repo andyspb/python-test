@@ -22,7 +22,7 @@ def zip_test():
     print("\n")
     t_matrix = zip(*matrix)
     for row in t_matrix:
-        print row
+        print (row)
 
 def numpy_test():
     matrix=[[1,2,3],[4,5,6]]

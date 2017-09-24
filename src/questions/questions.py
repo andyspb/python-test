@@ -16,7 +16,7 @@ def print_directory_contents(sPath):
 
 def printAn():
     A0 = dict(zip(('a','b','c','d','e'),(1,2,3,4,5)))
-    print A0
+    print (A0)
     
     A1 = range(10)
     A2 = sorted([i for i in A1 if i in A0])
@@ -28,13 +28,19 @@ def printAn():
 def f(x,l=[]):
     for i in range(x):
         l.append(i*i)
-        print i*i
+        print (i*i)
     print(l) 
 
 
 if __name__ == '__main__':
     #print_directory_contents("c:")
     #printAn()
-    f(2)
-    f(3,[3,2,1])
-    f(3)
+    #f(2)
+    #f(3,[3,2,1])
+    #f(3)
+    y = 20000
+    print (id(y))
+
+    y = 1000000
+    print (id(y))
+    

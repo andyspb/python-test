@@ -11,7 +11,7 @@ sorted_numbers = []
 
 def sort(number):
     time.sleep(number)
-    print number
+    print (number)
     sorted_numbers.append(number)
 
 def main():

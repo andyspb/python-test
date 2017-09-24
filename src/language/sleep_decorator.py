@@ -5,23 +5,19 @@ Created on Jul 5, 2017
 
 '''
 
+from logger.log import Log
+
 from time import sleep
 
 def print_decorator(function):
     def wrapper(*args, **kwargs):
-        print "From print_decorator"
+        print ("From print_decorator")
         return function(*args, **kwargs)
     return wrapper
 
 def sleep_decorator(function):
-
-    """
-    Limits how fast the function is
-    called.
-    """
-
     def wrapper(*args, **kwargs):
-        print "From wrapper(...)"
+        print ("From wrapper(...)")
         sleep(2)
         return function(*args, **kwargs)
     return wrapper
@@ -31,7 +27,19 @@ def sleep_decorator(function):
 def print_number(num):
     return num
 
-print(print_number(222))
 
-for num in range(1, 6):
-    print(print_number(num))
+
+def test():
+    l = Log()
+    l.info("test")
+    
+    print(print_number(222))
+
+    for num in range(1, 6):
+        print(print_number(num)) 
+        
+    s = [print_number(num) for num in range(1, 6)]
+    print ("s: ", s)
+        
+if __name__ == '__main__':
+    test()

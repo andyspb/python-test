@@ -6,7 +6,7 @@ Created on Sep 3, 2017
 
 import scipy
 import argparse
-import numpy as np
+import numpy_test as np
 from scipy import special, optimize
 import matplotlib.pyplot as plt
 

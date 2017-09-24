@@ -4,16 +4,7 @@ Created on Apr 27, 2017
 @author: andy
 '''
 import pandas as pd
-from pandas import DataFrame
 
-import numpy as np
-from numpy import *
-# General syntax to import a library but no functions: 
-##import (library) as (give the library a nickname/alias)
-import matplotlib.pyplot as plt
-import sys #only needed to determine Python version number
-import matplotlib #only needed to determine Matplotlib version number
-import pylab
 import itertools
 
 def expand_grid(data_dict):

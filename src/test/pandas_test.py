@@ -7,7 +7,7 @@ Created on Apr 27, 2017
 import pandas as pd
 from pandas import DataFrame
 
-import numpy as np
+import numpy_test as np
 from numpy import *
 # General syntax to import a library but no functions: 
 ##import (library) as (give the library a nickname/alias)

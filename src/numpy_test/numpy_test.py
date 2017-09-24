@@ -9,9 +9,9 @@ from pylab import *
 from numpy import *
 
 a = arange(15).reshape(3, 5)
-print "The matrix a is \n"+str(a)
-print "a[1,2] = " +str(a[1,2])
-print "the matrix dimension is " + str(a.shape)
+print ("The matrix a is \n"+str(a))
+print ("a[1,2] = " +str(a[1,2]))
+print ("the matrix dimension is " + str(a.shape))
 
 
 def main():

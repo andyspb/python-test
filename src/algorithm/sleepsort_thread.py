@@ -10,10 +10,10 @@ import time
 
 
 def list_append(n, sorted_numbers):
-    print n
+    print (n)
     time.sleep(n)
     sorted_numbers.append(n)
-    print sorted_numbers
+    print (sorted_numbers)
 
 
 def main():

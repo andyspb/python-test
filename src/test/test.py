@@ -30,7 +30,7 @@ class Enrichment:
         for database in databases:
             order_db = "S_ORDERS_" + database + "::ORDER";
             log = self.main_log_dir + "/small_order_enrichment." + database + "." + self.date + ".log 2>&1";
-            print "Order DB: %s\n" % (order_db);
+            print ("Order DB: %s\n") % (order_db);
             otq_params = "SPREAD_CHECK_THRESHOLD=" + spread_check_threshhold + ",";
             otq_params = otq_params + "CONSOLIDATED_QUOTE_DB=" + nbbo + ",PRIMARY_QUOTE_DB=" + nbbo + ",";
             otq_params = otq_params + "WINDOW_BEFORE=" + window_before + ",WINDOW_AFTER=" + window_after + ",";
@@ -40,15 +40,15 @@ class Enrichment:
             otq_params = otq_params + "DATE=" + self.date + " -s " + starttime + " -e " + endtime + " ";
             otq_params = otq_params + "-timezone " + timezone + " -batch_size 16 -max_concurrency 8 -process_dbs_concurrently true";
             command = self.main_onetick_dir + "/bin/tickdb_query.exe -context REMOTE -otq_file " + otq_file + " -otq_params " + otq_params;
-            print "command: %s\n" % (command);
-            print "log: %s\n" % (log);
+            print ("command: %s\n") % (command);
+            print ("log: %s\n") % (log);
             os.system(command + " >> " + log);
             time.sleep(60);
 
 
 def main(argv):
     if os.environ["MAIN_DATA_DIR"] == '' or os.environ["BESTEX_PACK"] == '' or os.environ["MAIN_CLIENT_DIR"] == '':
-        print "[Error]: Empty environment variables!"
+        print ("[Error]: Empty environment variables!")
         return -1
 
     date = (datetime.date.today() - datetime.timedelta(1)).strftime("%Y%m%d")
@@ -75,9 +75,9 @@ def main(argv):
     return 0
 
 def test():
-    print reduce (lambda x, y: x + y, filter(lambda x: x % 2, map(lambda x: x * x, xrange (10 ** 6))))
-    print sum(x * x for x in xrange(1, 10 ** 6, 2))
-    print reduce(lambda x, y: x + y, filter(lambda x: x % 2, map(lambda x: x * x, xrange (10 ** 6)))) == sum(x * x for x in xrange(1, 10 ** 6, 2))
+    print (lambda x, y: x + y, filter(lambda x: x % 2, map(lambda x: x * x, range (10 ** 6))))
+    print (sum(x * x for x in range(1, 10 ** 6, 2)))
+    print (lambda x, y: x + y, filter(lambda x: x % 2, map(lambda x: x * x, range (10 ** 6)))) == sum(x * x for x in range(1, 10 ** 6, 2))
 
 if __name__ == '__main__':
     test()
