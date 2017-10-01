@@ -1,22 +1,20 @@
-'''
-Created on Apr 27, 2017
+#!/usr/bin/env python
 
-@author: andy
-'''
 ##from (library) import (specific library function)
-import pandas as pd
-from pandas import DataFrame
+import sys  # only needed to determine Python version number
 
-import numpy_test as np
+import matplotlib  # only needed to determine Matplotlib version number
 from numpy import *
-# General syntax to import a library but no functions: 
-##import (library) as (give the library a nickname/alias)
-import matplotlib.pyplot as plt
-import sys #only needed to determine Python version number
-import matplotlib #only needed to determine Matplotlib version number
+from pandas import DataFrame
 import pylab
 
+import matplotlib.pyplot as plt
+import numpy_test as np
+import pandas as pd
 
+
+# General syntax to import a library but no functions: 
+##import (library) as (give the library a nickname/alias)
 x = np.arange(0, 5, 0.1)
 y = np.sin(x)
 

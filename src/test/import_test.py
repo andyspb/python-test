@@ -1,13 +1,11 @@
-'''
-Created on Sep 3, 2017
+#!/usr/bin/env python
 
-@author: andy
-'''
+import algorithm.fibo as f
 
-from algorithm import fibo
 
 def main():
-    print fibo.fib2(10)
+    print(f.fib2(10))
+
 
 if __name__ == '__main__':
     main()

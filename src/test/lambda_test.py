@@ -1,8 +1,4 @@
-'''
-Created on May 2, 2017
-
-@author: andy
-'''
+#!/usr/bin/env python
 
 import logging
 

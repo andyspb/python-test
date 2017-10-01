@@ -1,15 +1,13 @@
-'''
-Created on Apr 29, 2017
-
-@author: andy
-'''
+#!/usr/bin/env python
 
 import logging
 
 logger = logging.getLogger('python-test')
 
+
 def foo(bar):
     return bar + 1
+
 
 def main():
     logging.info("Decorator test")

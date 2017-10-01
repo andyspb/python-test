@@ -1,25 +1,29 @@
+#!/usr/bin/env python
 '''
 Created on May 1, 2017
 
 @author: andy
 '''
 import logging
-import time
 from multiprocessing.dummy import Pool as ThreadPool
+import time
+
 
 sorted_numbers = []
 
+
 def sort(number):
     time.sleep(number)
-    print (number)
+    print(number)
     sorted_numbers.append(number)
+
 
 def main():
     logging.info("Sleepsort with threadpool >>>>")
-    numbers = [1,4,3,5,8,7,13,26,55,14,2,9,12]
+    numbers = [1, 4, 3, 5, 8, 7, 13, 26, 55, 14, 2, 9, 12]
     logging.info(numbers)
     num = len(numbers)
-    pool = ThreadPool(num) 
+    pool = ThreadPool(num)
     pool.map(sort, numbers)
 
     pool.close()
