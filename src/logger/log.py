@@ -22,7 +22,7 @@ class Log(object):
         self.logger = logging.getLogger(name)
         logging.basicConfig(level=logging.DEBUG,
                             format='%(asctime)s %(name) -2s %(levelname) -2s %(message)s',
-                            datefmt='%d,%b %Y %H:%M:%S')
+                            datefmt='%d-%m-%Y %H:%M:%S')
         self.log_level = {
             Log.INFO : self.info,
             Log.DEBUG : self.debug,
@@ -51,6 +51,8 @@ class Log(object):
             f = self.log_level.get(level, None)
             if f != None:
                 f.__call__(param)
+            else:
+                print ("Incorrect log level: ", level)
             
             
     
